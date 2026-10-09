@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="referrer" content="no-referrer">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+ <title>Standort für die Mini-Haltestelle</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="helper.js" defer></script>
+</head>
+<body><main>
+ <p class="eyebrow">Mini-Haltestelle · Standortübernahme</p>
+ <h1>Deinen Standort übernehmen</h1>
+ <p>Diese Seite ermittelt deinen Standort nur auf Knopfdruck. Die Koordinaten bleiben im Browser und werden ausschließlich an das Portal zurückgegeben, das dieses Fenster geöffnet hat.</p>
+ <p id="status" role="status" aria-live="polite">Verbindung zum lokalen Portal wird geprüft …</p>
+ <p id="destination"></p>
+ <label><input id="consent" type="checkbox" disabled> Ich stimme einer einmaligen Standortabfrage durch meinen Browser zu.</label>
+ <button id="locate" disabled>Standort jetzt ermitteln</button>
+ <section id="preview" hidden aria-label="Ermittelter Standort">
+  <h2>Deine Standortvorschau</h2>
+  <dl><dt>Breitengrad</dt><dd id="latitude"></dd><dt>Längengrad</dt><dd id="longitude"></dd><dt>Genauigkeit</dt><dd id="accuracy"></dd></dl>
+  <p>Prüfe die Werte. Die Genauigkeit ist eine Schätzung des Browsers.</p>
+  <button id="return" disabled>Koordinaten an mein Portal zurückgeben</button>
+ </section>
+ <p><strong>Die Rückgabe speichert noch nichts.</strong> Bestätige den Standort anschließend im lokalen Portal, damit die Mini-Haltestelle ihn dauerhaft übernimmt.</p>
+ <p>Bei Problemen kannst du im Portal weiterhin Koordinaten manuell eingeben oder Haltestellen nach Namen suchen.</p>
+ <button id="close" class="secondary">Fenster schließen</button>
+</main></body></html>
